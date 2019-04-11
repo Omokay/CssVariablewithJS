@@ -3,8 +3,8 @@ body{
     font-family: 'Courier New', Courier, monospace;
     font-weight: 700;
     text-align: center;
-    background-color: rgb(234, 248, 253);
-    color: darkblue;
+    background-color: var(--base);
+    color: rgb(32, 32, 41);
 }
 
 :root{
