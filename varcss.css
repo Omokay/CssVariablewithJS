@@ -1,0 +1,37 @@
+body{
+    padding: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    text-align: center;
+    background-color: rgb(234, 248, 253);
+    color: darkblue;
+}
+
+:root{
+    --spacing: 0px;
+    --blur: 0px;
+    --base: #ce5222;
+}
+
+.controllers{
+    margin: 50px;
+}
+
+input{
+    width: 100px;
+    margin: 20px;
+}
+
+.mark{
+    color: var(--base);
+}
+
+img{
+    max-width: 500px;
+    max-height: 400px;
+    image-rendering: optimizeQuality;
+    border-radius: 20px;
+    padding: var(--spacing);
+    filter: blur(var(--blur));
+    background: var(--base);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS VARIABLES</title>
+        <link rel="stylesheet" type="text/css" href="varcss.css"/>
+    </head>
+    <body>
+
+        <h2>Changing the value of CSS variables using <span class="mark">JS</span></h2>
+        <div class="controllers">
+            <label for="spacing">Spacing:</label>
+            <input type="range" name="spacing" value="0" min="0" max="200" data-sizing="px"/>
+
+            <label for="blur">Blur:</label>
+            <input type="range" name="blur" value="0" min="0" max="200" data-sizing="px"/>
+
+            <label for="color">Base Color</label>
+            <input type="color" name="base" value="#ce5222"/>
+        </div>
+
+
+        <img src="./image.jpg" alt="An Image exists here"/>
+
+    <script>
+        const inputs = document.querySelectorAll('.controllers input');
+
+        function updateCSS(){
+            const suffix = this.dataset.sizing || '';
+            document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+        }
+        
+        inputs.forEach(input => input.addEventListener('change', updateCSS));
+        inputs.forEach(input => input.addEventListener('mousemove', updateCSS));
+
+    </script>
+    </body>
+</html>
